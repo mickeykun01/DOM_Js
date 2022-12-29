@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>DOM logics</h1>
+
+    <h2>
+        Write the code to access element which is having id as "text"
+    </h2>
+    <pre>
+        <span id="text">chaoo</span>
+        document.getElementById("text");
+    </pre>
+
+    <h2>
+        Write the code to access element which is having tag as "h1"
+    </h2>
+    <pre>
+        <h5>the main heading</h5>
+        document.getElementsByTagName("h5");
+    </pre>
+
+    <h2>
+        Write the code to access element which is having class as "box"
+    </h2>
+    <pre>
+        <span class="box">i am on my own</span>
+        <span class="box">yes that's right..</span>
+        document.getElementsByClassName("box");
+    </pre>
+
+    <h2>
+        Change the heading from ""Hello"" to ""Hello World"" using DOM functions"
+    </h2>
+    <pre>
+        <h3>hello</h3>
+        <button class="btn" onclick="changeText()">click here</button>
+        function changeText(){
+            let ele1 = document.getElementsByTagName("h3");
+            ele1[0].innerText = "Hello world"
+        }
+    </pre>
+
+    <h2>
+        Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". 
+        When user clicks on this button, the cards arrangement should be changed to vertical direction.
+    </h2>
+    <pre>
+        <div class="parent">
+            <div class="child">LIVE</div>
+            <div class="child">THE</div>
+            <div class="child">LIFE</div>
+        </div>
+        <button onclick="changeDirection()">change direction</button>
+    </pre>
+
+   <h2>
+    What’s the difference between window vs document?
+   </h2>
+   <pre>
+    <u>Window Object:</u> The window object is the topmost object of the DOM hierarchy. 
+        It represents a browser window or frame that displays the contents of the webpage.
+        <u>Document Object:</u> The document object represent a web page that is loaded in the browser. 
+        By accessing the document object, we can access the element in the HTML page.
+   </pre>
+
+   <h2>
+    <h4>Hello </h4>
+    Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" 
+    in the above given h1 tag using DOM functions"
+   </h2>
+   <pre>
+    <h1 id="colorchange">Hello</h1>
+    <button onclick="heading()" class="btn">Click Me</button>
+
+   </pre>
+
+   <h2>
+    Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page 
+    content should be changed to "Welcome to Elevation academy"
+   </h2>
+
+   <pre>
+    <h4 id="Text">Hello World</h4>
+    <button onclick="replace()" class="btn">Click Me</button>
+   </pre>
+
+   <h2>
+    Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second
+   </h2>
+   <pre>
+</p>
+<h3>Time:</h3>
+<div class="parent-clock">
+    <span class="hours"></span>
+    <span class="mins"></span>
+    <span class="secs"></span>
+    <span class="meridian"></span>
+</div>
+
+<p>
+   </pre>
+
+<h2>
+    Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected
+</h2>
+<pre>
+    <select name="" id="text1">
+        
+        <option value="20-21">Year 20-21</option>
+        <option value="21-22">Year 21-22</option>
+        <option value="22-23">Year 22-23</option>
+        <option value="23-24">Year 23-24</option>
+        <option value="24-25">Year 24-25</option>
+        <option value="25-26">Year 25-26</option>
+        
+        </select> <br><br><br>
+        <button onclick="getOption()" class="btn">Click here</button>
+        <p>The value of the selcted Option is :
+        <span id="output"></span>
+</pre>
+
+    <script src="index.js"></script>
+</body>
+</html>
